@@ -20,11 +20,18 @@ let half = 2;
 let extradollars = 3;
 var answer;
 const OUTPUT = document.getElementById("JavaScriptOutput");
-const NAME_FIELD = document.getElementById("nameField");
+const AGE_FIELD = document.getElementById("ageField")
+const MONEY_FIELD = document.getElementById("moneyField")
 
-function getFormInput(){
-    let userName = NAME_FIELD.value;
-    OUTPUT.innerHTML="<p>Your name is "+userName+"";
+
+function getMoneyInput(){
+    let userMoney = Number(MONEY_FIELD.value);
+    OUTPUT.innerHTML+="<p>You have "+userMoney+" dollars";
+}
+
+function getAgeInput(){
+    let userAge = Number(AGE_FIELD.value);
+    OUTPUT.innerHTML+="<p>You are "+userAge+" years old";
 }
 function start() {
 OUTPUT.innerHTML = "<h2>Added by JavaScript</h2>";
@@ -55,7 +62,7 @@ answer = num1 / num2;
 OUTPUT.innerHTML += "<br>divide = "+                 answer
 
 
-
+ 
 function welcome(){
 OUTPUT.innerHTML += "<br><br>Welcome to the shop";
 }
