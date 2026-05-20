@@ -22,6 +22,7 @@ var answer;
 const OUTPUT = document.getElementById("JavaScriptOutput");
 const AGE_FIELD = document.getElementById("ageField")
 const MONEY_FIELD = document.getElementById("moneyField")
+const CHOICE_FIELD = document.getElementById("choiceField")
 
 
 function calculateChange (_money, _price) {
@@ -35,7 +36,7 @@ function getMoneyInput(){
     if(userMoney >= 4){
     OUTPUT.innerHTML +="<br>You have enough money<br>"
     let change = calculateChange(userMoney, 4)
-    OUTPUT.innerHTML += "You will get $"+ change +" of change"
+    OUTPUT.innerHTML += "<br>You will get $"+ change +" of change"
     } else {
      OUTPUT.innerHTML += "<p>You litreally can't even afford a chocolate bar</p>"
     }
@@ -54,7 +55,14 @@ function getAgeInput(){
 }
 }
 
-
+let classArray = ["You loath chocolate", "Chocolate is meh", "Chocolate is pretty good", "Chocolate is the best thing EVER!!!!"];
+function getChoiceInput() {
+let choice = Number(CHOICE_FIELD.value);
+OUTPUT.innerHTML += "<br><br>You think: "+classArray[choice]+"";
+if(choice > 3){
+OUTPUT.innerHTML += "<br><br>Please pick a value from 0 - 3"
+}
+}
 
 function start() {
 
