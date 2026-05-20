@@ -10,7 +10,6 @@ console.log("if you read this ur cool trust")
 // Variables
 
 
-let change = calculateChange
 let pocketMoney = 67;
 let name = "Adam"
 let age = 15;
@@ -26,22 +25,20 @@ const MONEY_FIELD = document.getElementById("moneyField")
 
 
 function calculateChange (_money, _price) {
- change = _money - _price
- OUTPUT.innerHTMl += "You have $"+ change +" of change"
-
+ var change = _money - _price
+ return change;
 }
 
 function getMoneyInput(){
     let userMoney = Number(MONEY_FIELD.value);
     OUTPUT.innerHTML+="<p>You have "+userMoney+" dollars";
-    if(userMoney == 4){
+    if(userMoney >= 4){
     OUTPUT.innerHTML +="<br>You have enough money<br>"
-} else if (userMoney >= 5){
-    OUTPUT.innerHTML +="<br> You can buy a chocolate bar maybe 2<br>"
-} else {
-   OUTPUT.innerHTML += "<p>You litreally can't even afford a chocolate bar</p>"
-   calculateChange(userMoney, 4)
-}
+    let change = calculateChange(userMoney, 4)
+    OUTPUT.innerHTML += "You will get $"+ change +" of change"
+    } else {
+     OUTPUT.innerHTML += "<p>You litreally can't even afford a chocolate bar</p>"
+    }
 }
 
 function getAgeInput(){

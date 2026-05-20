@@ -47,7 +47,7 @@ function getAgeInput(){
 } else if (userAge <= 18){
     OUTPUT.innerHTML +="<br> Still big back<br>"
 } else {
-   OUTPUT.innerHTML += "<p>You litreally gonna get fat if u eat at this age</p>"
+   OUTPUT.innerHTML += "<p>You litreally gonna get big if u eat at this age</p>"
 }
 }
 
