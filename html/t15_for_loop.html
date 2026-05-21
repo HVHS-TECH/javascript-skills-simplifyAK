@@ -20,8 +20,29 @@
   <p>Open the console <code>(Ctrl-shift-i)</code> to see the messages.</p>
 
   <p><br><br><i>Copy your HTML from the last task and keep building.</i><br><br><br><br></p>
+<form onsubmit="return false;">
+    <label for="formName">Age:</label>
+    <input type="text" id="ageField" name="formName">
+    <input type="submit" onClick="getAgeInput()">
+  </form>
 
-  <div id="spaceForJavaScriptOutput">
+  <form onsubmit="return false;">
+    <label for="formName">Pocket Money:</label>
+    <input type="text" id="moneyField" name="formName">
+    <input type="submit" onClick="getMoneyInput()">
+  </form>
+   <form onsubmit="return false;">
+    <label for="formName">How much do you like chocolate?</label>
+    <input type="text" id="choiceField" name="formName">
+    <input type="submit" onClick="getChoiceInput()">
+  </form>
+  <form onsubmit="return false;">
+    <label for="formName">How many bottles of Coke?</label>
+    <input type="text" id="cokeField" name="formName">
+    <input type="submit" onClick="getDrinkInput()">
+  </form>
+ <button onclick="start()">Start</button>
+  <div id="JavaScriptOutput">
 
     The output of your script will go here.
 
