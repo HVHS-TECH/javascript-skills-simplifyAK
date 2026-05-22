@@ -111,13 +111,24 @@ OUTPUT.innerHTML += "<p> The "+ _name+" are..."+_price+"";
 
 function getDrinkInput() {
 let userCoke = Number(COKE_FIELD.value);
-OUTPUT.innerHTML += "<br><br>"+ userCoke+" Bottles of Coke on the wall";
+OUTPUT.innerHTML += "";
 
-for(let count = userCoke; count >= 2; count-- ) {
- OUTPUT.innerHTML += "<br><br>"+count+ " bottles of Coke"+"<br>If one of those bottles should happen to fall<br>"+(count - 1)+" Bottles of Coke on the wall!!!";
-}
+for (let count = userCoke; count >= 1; count--) { 
+        if (count === 1) {
+            OUTPUT.innerHTML += "<br><br>1 bottle of Coke on the wall, 1 bottle of Coke.";
+            OUTPUT.innerHTML += "<br>If that bottle should happen to fall,";
+            OUTPUT.innerHTML += "<br>No more bottles of Coke on the wall!!!";
+        } else if (count === 2) {
+            OUTPUT.innerHTML += "<br><br>2 bottles of Coke on the wall, 2 bottles of Coke.";
+            OUTPUT.innerHTML += "<br>If one of those bottles should happen to fall,";
+            OUTPUT.innerHTML += "<br>1 bottle of Coke on the wall!!!";
+        } else {
+            OUTPUT.innerHTML += "<br><br>" + count + " bottles of Coke on the wall, " + count + " bottles of Coke.";
+            OUTPUT.innerHTML += "<br>If one of those bottles should happen to fall,";
+            OUTPUT.innerHTML += "<br>" + (count - 1) + " bottles of Coke on the wall!!!"; 
+        }
+    }
 
-OUTPUT.innerHTML += "<br><br> 1 bottle of coke on the wall!"
 
 }
 
