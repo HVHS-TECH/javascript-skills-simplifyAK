@@ -114,12 +114,13 @@ let userCoke = Number(COKE_FIELD.value);
 OUTPUT.innerHTML += "<br><br>"+ userCoke+" Bottles of Coke on the wall";
 
 for(let count = userCoke; count >= 2; count-- ) {
- OUTPUT.innerHTML += "<br><br>"+count+ " bottles of Coke"+"<br>If one of those bottles should happen to fall"+count+" <br><br>Bottles of Coke on the wall!!!";
+ OUTPUT.innerHTML += "<br><br>"+count+ " bottles of Coke"+"<br>If one of those bottles should happen to fall<br>"+(count - 1)+" Bottles of Coke on the wall!!!";
 }
 
-OUTPUT.innerHTML += "<br><br>You have 1 bottle of coke"
+OUTPUT.innerHTML += "<br><br> 1 bottle of coke on the wall!"
 
 }
+
 /**************************************
   Main Code
 **************************************/
