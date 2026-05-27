@@ -112,6 +112,7 @@ OUTPUT.innerHTML += "<p> The "+ _name+" are..."+_price+"";
 function getDrinkInput() {
 let userCoke = Number(COKE_FIELD.value);
 OUTPUT.innerHTML += "";
+}
 
 for (let count = userCoke; count >= 1; count--) { 
         if (count === 1) {
@@ -130,7 +131,7 @@ for (let count = userCoke; count >= 1; count--) {
     }
 
 
-}
+
 
 /**************************************
   Main Code
