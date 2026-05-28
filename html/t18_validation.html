@@ -22,7 +22,7 @@
   <p><br><br><i>Copy your HTML from the last task and keep building.</i><br><br><br><br></p>
 <form onsubmit="return false;">
     <label for="formName">Age:</label>
-    <input type="number" id="ageField" name="formName" min="1" max="99" >
+    <input type="number" id="ageField" name="formName" min="1" max="99" required>
     <input type="submit" onClick="getAgeInput()">
   </form>
   <form onsubmit="return false;">
@@ -33,17 +33,17 @@
 
   <form onsubmit="return false;">
     <label for="formName">Pocket Money:</label>
-    <input type="text" id="moneyField" name="formName">
+    <input type="number" id="moneyField" name="formName" min="0" max="9999999999999">
     <input type="submit" onClick="getMoneyInput()">
   </form>
    <form onsubmit="return false;">
     <label for="formName">How much do you like chocolate?</label>
-    <input type="text" id="choiceField" name="formName">
+    <input type="number" id="choiceField" name="formName" min="0" max="3">
     <input type="submit" onClick="getChoiceInput()">
   </form>
   <form onsubmit="return false;">
     <label for="formName">How many bottles of Coke?</label>
-    <input type="text" id="cokeField" name="formName">
+    <input type="text" id="cokeField" name="formName" min="1" max="200">
     <input type="submit" onClick="getDrinkInput()">
   </form>
   <form onsubmit="return false;">

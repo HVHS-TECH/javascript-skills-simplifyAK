@@ -41,6 +41,17 @@ function getMoneyInput() {
     } else {
         OUTPUT.innerHTML += "<p>You litreally can't even afford a chocolate bar</p>";
     }
+
+    if (MONEY_FIELD.value <= 0) {
+        OUTPUT.innerHTML = "<br>You can't really have 0$ right??? Lock in and make some money";
+    } else if (MONEY_FIELD.value > 9999999999999) {
+        OUTPUT.innerHTML = "<br> You have more money that trees in the world. This is cap"
+    } else if (MONEY_FIELD.checkValidity() === false){
+        OUTPUT.innerHTML = "<br>Please fill in the form correctly."
+    } else    {
+        // Process the form normally
+    }
+   
 }
 
 function getAgeInput() {
@@ -142,36 +153,27 @@ function start() {
 
     OUTPUT.innerHTML += "67 times";
 
-    OUTPUT.innerHTML +=
-    "<br>You Have " + pocketMoney + " dollars";
+    OUTPUT.innerHTML +="<br>You Have " + pocketMoney + " dollars";
 
-    OUTPUT.innerHTML +=
-    "<br>Hi " + name;
+    OUTPUT.innerHTML +="<br>Hi " + name;
 
-    OUTPUT.innerHTML +=
-    "<br>As of " + year + " I am " + age;
+    OUTPUT.innerHTML +="<br>As of " + year + " I am " + age;
 
     let bornyear = year - age;
 
-    OUTPUT.innerHTML +=
-    "<br>You were born in " + bornyear;
+    OUTPUT.innerHTML +="<br>You were born in " + bornyear;
 
     let futureage = age + num1;
 
-    OUTPUT.innerHTML +=
-    "<br>In 10 years you will be " + futureage + " years old";
+    OUTPUT.innerHTML +="<br>In 10 years you will be " + futureage + " years old";
 
     let halfmoney = pocketMoney / half;
 
-    OUTPUT.innerHTML +=
-    "<br>You spend half your money, now you have "
-    + halfmoney + "$";
+    OUTPUT.innerHTML +="<br>You spend half your money, now you have " + halfmoney + "$";
 
     let extramoney = halfmoney + extradollars;
 
-    OUTPUT.innerHTML +=
-    "<br>Then you get 3$, now you have "
-    + extramoney + "$";
+    OUTPUT.innerHTML +="<br>Then you get 3$, now you have "+ extramoney + "$";
 
     answer = num1 + num2;
     OUTPUT.innerHTML += "<br>add = " + answer;
